@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#333333">
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:src="@drawable/dialogue" />
+    <Button
+        android:id="@+id/three_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3x3"
+        android:textStyle="italic"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="30sp"
+        android:background="@drawable/corners"
+        android:onClick="deButton"/>
+    <Button
+        android:id="@+id/five_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5x5"
+        android:textStyle="italic"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="30sp"
+        android:background="@drawable/corners"/>
+</LinearLayout>

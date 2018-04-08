@@ -27,7 +27,8 @@
         </activity>
         <activity android:name=".singleplayerActivity" />
         <activity android:name=".multiPlayerActivity" />
-        <activity android:name=".chooseBoardActivity"></activity>
+        <activity android:name=".chooseBoardActivity" />
+        <activity android:name=".fiveByFiveActivity"></activity>
     </application>
 
 </manifest>

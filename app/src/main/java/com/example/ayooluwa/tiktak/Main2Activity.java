@@ -18,17 +18,17 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main2);
 //set on click lisitener for the buttons
-        Button singleplayer = (Button) findViewById(R.id.singleplayer);
+        Button singleplayer = findViewById(R.id.singleplayer);
         //set a clickListener to the view
-        singleplayer.setOnClickListener(new View.OnClickListener() {
+      /** singleplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent si = new Intent(Main2Activity.this, singleplayerActivity.class);
                 startActivity(si);
             }
-        });
+        });**/
 
-        Button multiplayer = (Button) findViewById(R.id.multiplayer);
+        Button multiplayer = findViewById(R.id.multiplayer);
         //set onclick listener to the view
         multiplayer.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,13 +15,13 @@ public class singleplayerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.singleplayer);
-        playerName = (EditText) findViewById(R.id.three_board);
-        SendPlayerName = (Button) findViewById(R.id.proceed1);
+        playerName = findViewById(R.id.three_board);
+        SendPlayerName = findViewById(R.id.proceed1);
         SendPlayerName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pintent = new Intent(getApplicationContext(), chooseBoardActivity.class);
-                pintent.putExtra("EdiTtEXTvALUE1", playerName.getText().toString());
+                pintent.putExtra("EdiTtEXTvALUE", playerName.getText().toString());
                 startActivity(pintent);
             }
         });

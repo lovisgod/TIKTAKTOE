@@ -15,13 +15,13 @@ public class welcomeActivity extends AppCompatActivity {
 //set on click lisitener for the buttons
         Button singleplayer = findViewById(R.id.singleplayer);
         //set a clickListener to the view
-      /** singleplayer.setOnClickListener(new View.OnClickListener() {
+       singleplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent si = new Intent(welcomeActivity.this, singleplayerActivity.class);
                 startActivity(si);
             }
-        });**/
+        });
 
         Button multiplayer = findViewById(R.id.multiplayer);
         //set onclick listener to the view

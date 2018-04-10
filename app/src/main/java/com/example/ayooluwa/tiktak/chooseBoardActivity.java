@@ -11,16 +11,18 @@ public class chooseBoardActivity extends AppCompatActivity {
     private Dialog dialog;
     Button deButton;
     Button fbutton;
-    String playername;
-    String playername1;
-    String playername2;
+   // String playername;
+   // String playername1;
+   // String playername2;
+    private Intent intentfrom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_board);
-        playername =(getIntent().getExtras().getString("EdiTtEXTvALUE"));
-        playername1 = (getIntent().getExtras().getString("EdiTtEXTvALUE"));
-        playername2 = (getIntent().getExtras().getString("EdiTtEXTvALUE2"));
+        intentfrom = getIntent();
+       // playername =(getIntent().getExtras().getString("EdiTtEXTvALUE"));
+      //  playername1 = (getIntent().getExtras().getString("EdiTtEXTvALUE"));
+      //  playername2 = (getIntent().getExtras().getString("EdiTtEXTvALUE2"));
         Button darshboard = findViewById(R.id.chooseBoard);
         //set onclick listener to the view
         darshboard.setOnClickListener(new View.OnClickListener() {
@@ -36,17 +38,19 @@ public class chooseBoardActivity extends AppCompatActivity {
     public void deButton (View view){
         deButton = findViewById(R.id.three_board);
         Intent pi = new Intent(chooseBoardActivity.this,threeByThreeActivity.class);
-        pi.putExtra("EdiTtEXTvALUE", playername.toString());
-        pi.putExtra ("EdiTtEXTvALUE",playername1.toString());
-        pi.putExtra ("EdiTtEXTvALUE2",playername2.toString());
+      //  pi.putExtra("EdiTtEXTvALUE", playername.toString());
+      //  pi.putExtra ("EdiTtEXTvALUE",playername1.toString());
+       // pi.putExtra ("EdiTtEXTvALUE2",playername2.toString());
+        pi.putExtras(this.intentfrom);
         startActivity(pi);
     }
     public void fbutton (View view){
         fbutton= findViewById(R.id.five_board);
         Intent fi = new Intent(chooseBoardActivity.this,fiveByFiveActivity.class);
-        fi.putExtra("EdiTtEXTvALUE", playername.toString());
-        fi.putExtra ("EdiTtEXTvALUE",playername1.toString());
-        fi.putExtra ("EdiTtEXTvALUE2",playername2.toString());
+       // fi.putExtra("EdiTtEXTvALUE", playername.toString());
+      //  fi.putExtra ("EdiTtEXTvALUE",playername1.toString());
+       // fi.putExtra ("EdiTtEXTvALUE2",playername2.toString());
+        fi.putExtras(this.intentfrom);
         startActivity(fi);
     }
     }

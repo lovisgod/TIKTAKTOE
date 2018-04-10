@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class threeByThreeActivity extends AppCompatActivity implements View.OnClickListener {
     public Button[][] buttons = new Button[3][3];
     public boolean player1turn = true;
     //    public boolean player2turn = false;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ni = new Intent(MainActivity.this, Main2Activity.class);
+                Intent ni = new Intent(threeByThreeActivity.this, welcomeActivity.class);
                 startActivity(ni);
             }
         });
@@ -128,13 +128,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
 
-        if (field[0][2].equals(field[1][1])
+        return field[0][2].equals(field[1][1])
                 && field[0][2].equals(field[2][0])
-                && !field[0][2].equals("")) {
-            return true;
-        }
+                && !field[0][2].equals("");
 
-        return false;
     }
 
 
@@ -174,6 +171,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         player2point = 0;
         updatePointsText();
         resetBoard();
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("roundCount", movescount);
+        outState.putInt("player1Points", player1point);
+        outState.putInt("player2Points", player2point);
+        outState.putBoolean("player1Turn", player1turn);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        movescount = savedInstanceState.getInt("roundCount");
+        player1point = savedInstanceState.getInt("player1Points");
+        player2point = savedInstanceState.getInt("player2Points");
+        player1turn = savedInstanceState.getBoolean("player1Turn");
     }
 }
 

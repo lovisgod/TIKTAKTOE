@@ -1,17 +1,12 @@
 package com.example.ayooluwa.tiktak;
 
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class Main2Activity extends AppCompatActivity {
+public class welcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +18,7 @@ public class Main2Activity extends AppCompatActivity {
       /** singleplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent si = new Intent(Main2Activity.this, singleplayerActivity.class);
+                Intent si = new Intent(welcomeActivity.this, singleplayerActivity.class);
                 startActivity(si);
             }
         });**/
@@ -33,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         multiplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent pi = new Intent(Main2Activity.this, multiPlayerActivity.class);
+                Intent pi = new Intent(welcomeActivity.this, multiPlayerActivity.class);
                 startActivity(pi);
             }
         });

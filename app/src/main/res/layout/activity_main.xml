@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#333333"
     android:orientation= "vertical"
-    tools:context="com.example.ayooluwa.tiktak.MainActivity">
+    tools:context="com.example.ayooluwa.tiktak.threeByThreeActivity">
 
 
     <RelativeLayout

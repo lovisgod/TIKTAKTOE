@@ -1,6 +1,5 @@
 package com.example.ayooluwa.tiktak;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -61,7 +60,7 @@ public class fiveByFiveActivity extends AppCompatActivity implements View.OnClic
         mainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ni = new Intent(fiveByFiveActivity.this, Main2Activity.class);
+                Intent ni = new Intent(fiveByFiveActivity.this, welcomeActivity.class);
                 startActivity(ni);
             }
         });
@@ -181,6 +180,25 @@ public class fiveByFiveActivity extends AppCompatActivity implements View.OnClic
         player2point = 0;
         updatePointsText();
         resetBoard();
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("roundCount", movescount);
+        outState.putInt("player1Points", player1point);
+        outState.putInt("player2Points", player2point);
+        outState.putBoolean("player1Turn", player1turn);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        movescount = savedInstanceState.getInt("roundCount");
+        player1point = savedInstanceState.getInt("player1Points");
+        player2point = savedInstanceState.getInt("player2Points");
+        player1turn = savedInstanceState.getBoolean("player1Turn");
     }
 
 

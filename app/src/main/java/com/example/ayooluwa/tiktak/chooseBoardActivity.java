@@ -1,6 +1,5 @@
 package com.example.ayooluwa.tiktak;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -36,7 +35,7 @@ public class chooseBoardActivity extends AppCompatActivity {
     }
     public void deButton (View view){
         deButton = findViewById(R.id.three_board);
-        Intent pi = new Intent(chooseBoardActivity.this,MainActivity.class);
+        Intent pi = new Intent(chooseBoardActivity.this,threeByThreeActivity.class);
         pi.putExtra("EdiTtEXTvALUE", playername.toString());
         pi.putExtra ("EdiTtEXTvALUE",playername1.toString());
         pi.putExtra ("EdiTtEXTvALUE2",playername2.toString());

@@ -22,7 +22,7 @@ public class singleplayerActivity extends AppCompatActivity {
             public void onClick(View view) {
                 pintent = new Intent(getApplicationContext(), chooseBoardActivity.class);
                 pintent.putExtra("EdiTtEXTvALUE", playerName.getText().toString());
-                pintent.putExtra("human", false);
+                pintent.putExtra("not correct", false);
                 startActivity(pintent);
             }
         });

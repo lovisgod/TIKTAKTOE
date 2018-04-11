@@ -140,6 +140,7 @@ public class threeByThreeActivity extends AppCompatActivity implements View.OnCl
 
     }
     private void player1Wins() {
+       //this automatically updates the player point value that was declaired as a global variable
         player1point++;
         Toast.makeText(this, playername + "wins", Toast.LENGTH_SHORT).show();
         updatePointsText();
@@ -147,6 +148,7 @@ public class threeByThreeActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void player2Wins() {
+        //this automatically updates the player point value that was declaired as a global variable
         player2point++;
         Toast.makeText(this, player2 + "wins", Toast.LENGTH_SHORT).show();
         updatePointsText();
